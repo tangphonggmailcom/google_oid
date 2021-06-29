@@ -37,8 +37,9 @@
     if (params && params['access_token']) {
       var xhr = new XMLHttpRequest();
       xhr.open('GET',
-          'https://www.googleapis.com/drive/v3/about?fields=user&' +
-          'access_token=' + params['access_token']);
+          // 'https://www.googleapis.com/drive/v3/about?fields=user&' + 'access_token=' + params['access_token']);
+          'https://www.googleapis.com/oauth2/v2/userinfo?fields=user&' + 'access_token=' + params['access_token']);
+  
       xhr.onreadystatechange = function (e) {
         if (xhr.readyState === 4 && xhr.status === 200) {
           console.log(xhr.response);
