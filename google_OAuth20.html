@@ -13,6 +13,8 @@
     //
     console.log(decodeURIComponent(m[1]),decodeURIComponent(m[2]));
   }
+  //
+  console.log('Oauth params ', params);
   if (Object.keys(params).length > 0) {
     //
     console.log('Oauth Params length > 0');
@@ -30,6 +32,8 @@
     //
     console.log('Oauth >> trySampleRequest');
     var params = JSON.parse(localStorage.getItem('oauth2-test-params'));
+    //
+    console.log('Oauth >> trySampleRequest ', params);
     if (params && params['access_token']) {
       var xhr = new XMLHttpRequest();
       xhr.open('GET',
