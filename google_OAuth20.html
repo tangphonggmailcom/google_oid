@@ -1,7 +1,7 @@
 <html><head></head><body>
 <script>
-  var YOUR_CLIENT_ID = 'REPLACE_THIS_VALUE';
-  var YOUR_REDIRECT_URI = 'REPLACE_THIS_VALUE';
+  var YOUR_CLIENT_ID = '37520565462-daat63veoopl62h6sti4d9sn84uk1bs3.apps.googleusercontent.com';
+  var YOUR_REDIRECT_URI = 'https://tangphonggmailcom.github.io/google_oid/callback';
   var fragmentString = location.hash.substring(1);
 
   // Parse query string to see if page request is coming from OAuth 2.0 server.
@@ -53,8 +53,8 @@
     form.setAttribute('action', oauth2Endpoint);
 
     // Parameters to pass to OAuth 2.0 endpoint.
-    var params = {'client_id': 37520565462-daat63veoopl62h6sti4d9sn84uk1bs3.apps.googleusercontent.com,
-                  'redirect_uri': https://tangphonggmailcom.github.io/google_oid/callback,
+    var params = {'client_id': YOUR_CLIENT_ID,
+                  'redirect_uri': YOUR_REDIRECT_URI,
                   'scope': 'https://www.googleapis.com/auth/drive.metadata.readonly',
                   'state': 'try_sample_request',
                   'include_granted_scopes': 'true',
