@@ -18,6 +18,7 @@
     console.log('Oauth Params length > 0');
     localStorage.setItem('oauth2-test-params', JSON.stringify(params) );
     if (params['state'] && params['state'] == 'try_sample_request') {
+      //
       console.log('Oauth Run try_sample_request');
       trySampleRequest();
     }
@@ -26,6 +27,8 @@
   // If there's an access token, try an API request.
   // Otherwise, start OAuth 2.0 flow.
   function trySampleRequest() {
+    //
+    console.log('Oauth >> trySampleRequest');
     var params = JSON.parse(localStorage.getItem('oauth2-test-params'));
     if (params && params['access_token']) {
       var xhr = new XMLHttpRequest();
@@ -50,6 +53,8 @@
    * Create form to request access token from Google's OAuth 2.0 server.
    */
   function oauth2SignIn() {
+    //
+    console.log('Oauth >> oauth2SignIn');
     // Google's OAuth 2.0 endpoint for requesting an access token
     var oauth2Endpoint = 'https://accounts.google.com/o/oauth2/v2/auth';
 
