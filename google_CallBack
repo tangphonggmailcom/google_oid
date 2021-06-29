@@ -1,7 +1,7 @@
 <html><head></head><body>
 <script>
   var YOUR_CLIENT_ID = '37520565462-daat63veoopl62h6sti4d9sn84uk1bs3.apps.googleusercontent.com';
-  var YOUR_REDIRECT_URI = 'https://tangphonggmailcom.github.io/google_oid/google_OAuth20.html';
+  var YOUR_REDIRECT_URI = 'https://tangphonggmailcom.github.io/google_oid/google_Callback';
   var fragmentString = location.hash.substring(1);
 
   // Parse query string to see if page request is coming from OAuth 2.0 server.
@@ -21,6 +21,7 @@
   // Otherwise, start OAuth 2.0 flow.
   function trySampleRequest() {
     var params = JSON.parse(localStorage.getItem('oauth2-test-params'));
+    console.log(params['access_token'])
     if (params && params['access_token']) {
       var xhr = new XMLHttpRequest();
       xhr.open('GET',
